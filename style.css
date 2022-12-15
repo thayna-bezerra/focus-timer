@@ -7,7 +7,7 @@
 :root {
   --bg-color: #121214;
 
-  --base-color: 194;
+  --base-color: 3560;
   --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
   --primary-color: hsl(var(--base-color), 100%, 63%);
 
@@ -56,6 +56,7 @@ main {
   font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
 
   display: flex;
+  margin-bottom: 1.6rem;
 }
 
 #controls {
