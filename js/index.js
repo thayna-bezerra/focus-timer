@@ -12,7 +12,6 @@ const btnSoundOff = document.querySelector('.sound-off')
 
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
-/////let minutes = Number(minutesDisplay.textContent)
 
 //injeção de dependencias
 
@@ -26,8 +25,7 @@ const controls = Controls({
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,
-  resetControls: controls.reset,
-  ////minutes
+  resetControls: controls.reset
 })
 
 
@@ -65,6 +63,6 @@ btnSet.addEventListener('click', function(){
     return
   }
 
-  timer.updateDisplay(minutes, 0)
+  timer.updateDisplay(newMinutes, 0)
   timer.updateMinutes(newMinutes)
 })
