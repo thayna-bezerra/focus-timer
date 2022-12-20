@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #FFFFFF;
+  --timer-color: #323238;
+  
+  /*card songs idle*/
+  --bg-card-idle: #E1E1E6;
+  --icon-card-idle: #323238;
+
+  /*card songs active*/
+  --bg-card-active: #02799D;
+  --icon-card-active: #FFFFFF;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  align-self: center;
+  justify-self: center;
+}
+
+/*posicionar elementos na tela*/
+
+/*cronometro*/
+#timer {
+  color: var(--timer-color);
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+/*botões do controle do timer*/
+#controls-timer button{
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/*cards de seleção de músicas*/
+#sound-controls button{
+  background-color: var(--bg-card-idle);
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  border-radius: 2.0rem;
+
+  cursor: pointer;  
+}
