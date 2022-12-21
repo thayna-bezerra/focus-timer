@@ -29,17 +29,28 @@ body {
 }
 
 main {
+  display: flex;
   align-self: center;
   justify-self: center;
 }
 
-/*posicionar elementos na tela*/
+#wrapper-timer{
+  align-self: center;
+  justify-self: center;
+
+  margin-right: 19.2rem;
+}
+
+#controls-timer{
+  display: flex;
+  justify-content: space-between;
+}
 
 /*cronometro*/
 #timer {
   color: var(--timer-color);
-  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
-
+  font-size: clamp(5rem, 5rem + 10vw, 11.8rem);
+  
   display: flex;
   margin-bottom: 1.6rem;
 }
@@ -48,18 +59,33 @@ main {
 #controls-timer button{
   background-color: transparent;
   border: none;
-
+  
   cursor: pointer;
+  
+  width: 4.8rem;
+  height: 4.8rem;
 }
 
-/*cards de seleção de músicas*/
+#sound-controls{  
+  align-self: center;
+  justify-self: center;
+
+  padding: 15px;
+  width: 33rem;
+  height: 38rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 #sound-controls button{
   background-color: var(--bg-card-idle);
   width: 13.8rem;
   height: 15.2rem;
-
+  
   border: none;
   border-radius: 2.0rem;
-
-  cursor: pointer;  
+  
+  cursor: pointer; 
 }
