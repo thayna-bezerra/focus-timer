@@ -79,7 +79,7 @@ main {
   flex-wrap: wrap;
 }
 
-#sound-controls button{
+button{ /*sound-controls*/
   background-color: var(--bg-card-idle);
   width: 13.8rem;
   height: 15.2rem;
@@ -92,4 +92,9 @@ main {
 
 .hide {
   display: none;
+}
+
+.is-selected, .is-selected svg path {
+  background-color: var(--bg-card-active);
+  fill: var(--icon-card-active);
 }

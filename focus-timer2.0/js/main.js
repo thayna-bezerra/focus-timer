@@ -8,16 +8,22 @@ const btnIncrease = document.querySelector('.increase')
 const btnDecrease = document.querySelector('.decrease')
 
 //CARDS SONOROS
-const cardOne = document.querySelector('.forest-song')
-const cardTwo = document.querySelector('.rain-song')
-const cardThree = document.querySelector('.coffee-song')
-const cardFour = document.querySelector('.fireplace')
+const cardForest = document.querySelector('.forest-song')
+const cardRain = document.querySelector('.rain-song')
+const cardCoffee = document.querySelector('.coffee-song')
+const cardFire = document.querySelector('.fireplace')
 
 //PARA O CRONOMETRO
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
+
+//SOUNDS
+/*const forestSong = new Audio("sounds/Floresta.wav")
+const rainSong = new Audio("https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view")
+const coffeeSong = new Audio("https://drive.google.com/file/d/1OxLKpCwg2wrxXFNUHgZxJ51QEt0ac5RA/view")
+const fireplaceSong = new Audio("https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view")*/
 
 //////////////////////////////////////////////
 
@@ -46,7 +52,46 @@ btnIncrease.addEventListener('click', function(){
 })
 
 btnDecrease.addEventListener('click', function(){
-  updateTimerDisplay(minutes -= 5, 0)
+  if(minutes > 0){
+    updateTimerDisplay(minutes -= 5, 0)
+  }
+})
+
+//CARDS PARA INICIAR FUNDO SONORO
+cardForest.addEventListener('click', function(){
+  cardForest.classList.add('is-selected')
+  cardRain.classList.remove('is-selected')
+  cardCoffee.classList.remove('is-selected')
+  cardFire.classList.remove('is-selected')
+
+  /*forestSong.play()
+  rainSong.pause()
+  coffeeSong.pause()
+  fireplaceSong.pause()*/
+})
+
+cardRain.addEventListener('click', function(){
+  cardForest.classList.remove('is-selected')
+  cardRain.classList.add('is-selected')
+  cardCoffee.classList.remove('is-selected')
+  cardFire.classList.remove('is-selected')
+
+})
+
+cardCoffee.addEventListener('click', function(){
+  cardForest.classList.remove('is-selected')
+  cardRain.classList.remove('is-selected')
+  cardCoffee.classList.add('is-selected')
+  cardFire.classList.remove('is-selected')
+
+})
+
+cardFire.addEventListener('click', function(){
+  cardForest.classList.remove('is-selected')
+  cardRain.classList.remove('is-selected')
+  cardCoffee.classList.remove('is-selected')
+  cardFire.classList.add('is-selected')
+
 })
 
 //CRONOMETRO
