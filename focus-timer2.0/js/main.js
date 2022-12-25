@@ -20,10 +20,10 @@ let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
 
 //SOUNDS
-/*const forestSong = new Audio("sounds/Floresta.wav")
-const rainSong = new Audio("https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view")
-const coffeeSong = new Audio("https://drive.google.com/file/d/1OxLKpCwg2wrxXFNUHgZxJ51QEt0ac5RA/view")
-const fireplaceSong = new Audio("https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view")*/
+const forestSong = new Audio('sounds/Floresta.wav')
+const rainSong = new Audio('sounds/Chuva.wav')
+const coffeeSong = new Audio('sounds/Cafeteria.wav')
+const fireplaceSong = new Audio('sounds/Lareira.wav')
 
 //////////////////////////////////////////////
 
@@ -64,18 +64,22 @@ cardForest.addEventListener('click', function(){
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.remove('is-selected')
 
-  /*forestSong.play()
+  forestSong.play();
   rainSong.pause()
   coffeeSong.pause()
-  fireplaceSong.pause()*/
+  fireplaceSong.pause()
 })
 
 cardRain.addEventListener('click', function(){
   cardForest.classList.remove('is-selected')
   cardRain.classList.add('is-selected')
   cardCoffee.classList.remove('is-selected')
-  cardFire.classList.remove('is-selected')
-
+  cardFire.classList.remove('is-selected')  
+  
+  forestSong.pause()
+  rainSong.play();
+  coffeeSong.pause()
+  fireplaceSong.pause()
 })
 
 cardCoffee.addEventListener('click', function(){
@@ -84,6 +88,10 @@ cardCoffee.addEventListener('click', function(){
   cardCoffee.classList.add('is-selected')
   cardFire.classList.remove('is-selected')
 
+  forestSong.pause()
+  rainSong.pause()
+  coffeeSong.play()
+  fireplaceSong.pause()
 })
 
 cardFire.addEventListener('click', function(){
@@ -92,6 +100,10 @@ cardFire.addEventListener('click', function(){
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.add('is-selected')
 
+  forestSong.pause()
+  rainSong.pause()
+  coffeeSong.pause()
+  fireplaceSong.play()
 })
 
 //CRONOMETRO
