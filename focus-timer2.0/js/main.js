@@ -25,7 +25,31 @@ const rainSong = new Audio('sounds/Chuva.wav')
 const coffeeSong = new Audio('sounds/Cafeteria.wav')
 const fireplaceSong = new Audio('sounds/Lareira.wav')
 
+forestSong.loop = true
+rainSong.loop = true
+coffeeSong.loop = true
+fireplaceSong.loop = true
+
+//DARK MODE
+const btnLightMode = document.querySelector('.icon-light')
+const btnDarkMode = document.querySelector('.icon-dark')
+const $html = document.querySelector('html')
+
 //////////////////////////////////////////////
+
+btnLightMode.addEventListener('click', function(){
+  btnLightMode.classList.add('hide')
+  btnDarkMode.classList.remove('hide')
+
+  $html.classList.add('dark-mode')
+})
+
+btnDarkMode.addEventListener('click', function(){
+  btnLightMode.classList.remove('hide')
+  btnDarkMode.classList.add('hide')
+
+  $html.classList.remove('dark-mode')
+})
 
 //BOTÕES DE INICIAR E PAUSAR O CRONOMETRO
 btnPlay.addEventListener('click', function(){
@@ -63,12 +87,12 @@ cardForest.addEventListener('click', function(){
   cardRain.classList.remove('is-selected')
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.remove('is-selected')
-  
+    
   forestSong.play()
   rainSong.pause()
   coffeeSong.pause()
   fireplaceSong.pause()
-  
+    
   changeVolume(forestSong, document.querySelector('#volume-forest'))
 })
 

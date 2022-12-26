@@ -19,6 +19,19 @@
   font-size: 62.5%;
 }
 
+.dark-mode:root {
+  --bg-color: #121214;
+  --timer-color: #FFFFFF;
+  
+  /*card songs idle*/
+  --bg-card-idle: #29292E;
+  --icon-card-idle: #C4C4CC;
+
+  /*card songs active*/
+  --bg-card-active: #0A3442;
+  --icon-card-active: #FFFFFF;
+}
+
 body {
   background-color: var(--bg-color);
 
@@ -26,6 +39,19 @@ body {
 
   display: grid;
   min-height: 100vh;
+
+  padding-bottom: 120px;
+}
+
+header{
+  align-self: center;
+  justify-self: end;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 main {
