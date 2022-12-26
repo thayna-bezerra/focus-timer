@@ -90,6 +90,47 @@ button{ /*sound-controls*/
   cursor: pointer; 
 }
 
+input[type="range"]{
+  position: relative;
+  outline: none;
+  
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  
+  width: 8rem;
+  margin-top: 35px;
+  
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+  background-color: var(--icon-card-idle);
+  height: 0.4rem;
+  border-radius: 5px;
+
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+
+  background: var(--icon-card-idle);
+  width: 15px;
+  height: 15px;
+  margin: -5px 0 0 0;
+  border-radius: 100px;
+
+  clip-path: ellipse(closest-side farthest-side);
+}
+
 .hide {
   display: none;
 }
@@ -97,4 +138,9 @@ button{ /*sound-controls*/
 .is-selected, .is-selected svg path {
   background-color: var(--bg-card-active);
   fill: var(--icon-card-active);
+}
+
+.is-selected input[type="range"]::-webkit-slider-runnable-track,
+.is-selected input[type="range"]::-webkit-slider-thumb{
+  background-color: var(--icon-card-active);
 }

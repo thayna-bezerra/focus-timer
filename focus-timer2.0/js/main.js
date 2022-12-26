@@ -144,6 +144,3 @@ function countdown(){
     countdown()
   }, 1000)
 }
-
-
-
