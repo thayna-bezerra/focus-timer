@@ -7,17 +7,17 @@ const btnStop = document.querySelector('.stop')
 const btnIncrease = document.querySelector('.increase')
 const btnDecrease = document.querySelector('.decrease')
 
-//CARDS SONOROS
-const cardForest = document.querySelector('.forest-song')
-const cardRain = document.querySelector('.rain-song')
-const cardCoffee = document.querySelector('.coffee-song')
-const cardFire = document.querySelector('.fireplace')
-
 //PARA O CRONOMETRO
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
+
+//CARDS SONOROS
+const cardForest = document.querySelector('.forest-song')
+const cardRain = document.querySelector('.rain-song')
+const cardCoffee = document.querySelector('.coffee-song')
+const cardFire = document.querySelector('.fireplace')
 
 //SOUNDS
 const forestSong = new Audio('sounds/Floresta.wav')
@@ -63,11 +63,13 @@ cardForest.addEventListener('click', function(){
   cardRain.classList.remove('is-selected')
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.remove('is-selected')
-
-  forestSong.play();
+  
+  forestSong.play()
   rainSong.pause()
   coffeeSong.pause()
   fireplaceSong.pause()
+  
+  changeVolume(forestSong, document.querySelector('#volume-forest'))
 })
 
 cardRain.addEventListener('click', function(){
@@ -76,10 +78,12 @@ cardRain.addEventListener('click', function(){
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.remove('is-selected')  
   
+  rainSong.play()
   forestSong.pause()
-  rainSong.play();
   coffeeSong.pause()
   fireplaceSong.pause()
+
+  changeVolume(rainSong, document.querySelector('#volume-rain'))
 })
 
 cardCoffee.addEventListener('click', function(){
@@ -88,10 +92,12 @@ cardCoffee.addEventListener('click', function(){
   cardCoffee.classList.add('is-selected')
   cardFire.classList.remove('is-selected')
 
+  coffeeSong.play()
   forestSong.pause()
   rainSong.pause()
-  coffeeSong.play()
   fireplaceSong.pause()
+
+  changeVolume(coffeeSong, document.querySelector('#volume-coffee'))
 })
 
 cardFire.addEventListener('click', function(){
@@ -100,11 +106,18 @@ cardFire.addEventListener('click', function(){
   cardCoffee.classList.remove('is-selected')
   cardFire.classList.add('is-selected')
 
+  fireplaceSong.play()
   forestSong.pause()
   rainSong.pause()
   coffeeSong.pause()
-  fireplaceSong.play()
+  
+  changeVolume(fireplaceSong, document.querySelector('#volume-fireplace'))
 })
+
+function changeVolume(sound, currentVolume){
+  let CurrentVolume = currentVolume
+  sound.volume = CurrentVolume.value / 100;
+}
 
 //CRONOMETRO
 function updateTimerDisplay(minutes, seconds){
