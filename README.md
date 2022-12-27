@@ -20,6 +20,6 @@ Focus Timer é um cronômetro personalizável onde é acompanhado por um fundo s
   <li>Opção de ligar/desligar fundo sonoro</li>
 </ul>
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58120519/209714269-e9d4e25e-dbf8-4a90-a545-28dc7697e79f.gif)
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/58120519/209715905-a6603fea-77b1-455f-aec1-d7136e9bf52f.gif)
 
 <h5>Para testar você pode baixar os arquivos e abri-los em seu navegador pelo Live Server no VS Code.</h5>
