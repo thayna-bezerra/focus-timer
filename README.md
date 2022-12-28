@@ -15,9 +15,9 @@ Focus Timer é um cronômetro personalizável onde é acompanhado por um fundo s
 
 <h4>focus-timer2.0</h4>
 <ul> 
-  <li>Botão para iniciar/pausar/resetar timer</li>
-  <li>Botão para inserir novo timer</li>
-  <li>Opção de ligar/desligar fundo sonoro</li>
+  <li>Botão para aumentar/diminuir 5 minutos do timer</li>
+  <li>Cards com sons específicos + controle de volume</li>
+  <li>Dark/Light Mode</li>
 </ul>
 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/58120519/209715905-a6603fea-77b1-455f-aec1-d7136e9bf52f.gif)
